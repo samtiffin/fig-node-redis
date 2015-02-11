@@ -1,0 +1,11 @@
+web:
+    build: .
+    command: node server.js
+    ports:
+    - "8008:8008"
+    volumes:
+    - .:/app
+    links: 
+    - redis
+redis:
+    image: redis:2.8
